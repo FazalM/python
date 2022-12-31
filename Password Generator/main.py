@@ -44,7 +44,7 @@ canvas.create_image(200,200, image=image_one)
 canvas.grid(column=1, row=0)
 
 username_label = Label()
-username_label.config(text="Username:")
+username_label.config(text="Website:")
 username_label.grid(column=0, row=2)
 
 username_entry = Entry(width=48)
