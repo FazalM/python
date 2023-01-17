@@ -2,6 +2,7 @@ from turtle import Turtle, Screen
 from paddle import Paddle
 from ball import Ball
 from scoreboard import Scoreboard
+import time
 
 SCREEN_SIZE_X = 800
 SCREEN_SIZE_Y = 600
@@ -24,15 +25,17 @@ score = Scoreboard()
 
 b = Ball(0,0)
 
-screen.listen()
+
 screen.onkey(player_one.up,"Up")
 screen.onkey(player_one.down,"Down")
 
 screen.onkey(player_two.up,"w")
 screen.onkey(player_two.down,"s")
+screen.listen()
 
 game_is_on = True
 while game_is_on:
+    time.sleep(0.01)
     screen.update()
     b.move_ball()
 
